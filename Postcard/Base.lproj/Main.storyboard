@@ -59,6 +59,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DRINKS_06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Q1a-C7-TI7">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="318" y="169" width="80" height="80"/>
+                                </variation>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HXO-4q-YKK">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -94,40 +101,45 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="72" width="382" height="81"/>
+                                    <rect key="frame" x="16" y="101" width="382" height="52"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DRINKS_06.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Q1a-C7-TI7">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8N-pm-SQz">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="318" y="169" width="80" height="80"/>
+                                    <rect key="frame" x="16" y="72" width="258" height="21"/>
                                 </variation>
-                            </imageView>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="Q1a-C7-TI7"/>
                                 <exclude reference="HXO-4q-YKK"/>
                                 <exclude reference="Tlv-kF-mE9"/>
                                 <exclude reference="WbU-Ib-IaU"/>
                                 <exclude reference="PjR-eo-FxT"/>
-                                <exclude reference="Q1a-C7-TI7"/>
+                                <exclude reference="E8N-pm-SQz"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
+                                <include reference="Q1a-C7-TI7"/>
                                 <include reference="HXO-4q-YKK"/>
                                 <include reference="Tlv-kF-mE9"/>
                                 <include reference="WbU-Ib-IaU"/>
                                 <include reference="PjR-eo-FxT"/>
-                                <include reference="Q1a-C7-TI7"/>
+                                <include reference="E8N-pm-SQz"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="btnSendMail" destination="WbU-Ib-IaU" id="nKL-l6-ujL"/>
+                        <outlet property="lblDisplayName" destination="E8N-pm-SQz" id="LVq-rm-WJ7"/>
                         <outlet property="lblDisplaySentMessage" destination="PjR-eo-FxT" id="zNI-MM-ePF"/>
                         <outlet property="txtEnterMessage" destination="Tlv-kF-mE9" id="jfe-SH-xEp"/>
                         <outlet property="txtEnterName" destination="HXO-4q-YKK" id="w1P-qj-pyY"/>

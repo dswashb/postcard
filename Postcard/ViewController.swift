@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var btnSendMail: UIButton!
     
+    @IBOutlet weak var lblDisplayName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -49,8 +51,11 @@ class ViewController: UIViewController {
         // Change button text
         btnSendMail.setTitle("Mail Sent", forState: UIControlState.Normal)
         
-        //New comment
-        
+        lblDisplayName.hidden = false
+        lblDisplayName.textColor = UIColor.blueColor()
+        lblDisplayName.text = txtEnterName.text
+        txtEnterName.text=""
+        txtEnterName.resignFirstResponder()
         
     }
 
